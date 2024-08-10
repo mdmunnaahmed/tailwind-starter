@@ -19,6 +19,7 @@ module.exports = {
     },
     fontSize: {
       sm: "0.875rem",
+      md: "0.875rem",
       base: "1rem",
       lg: "1.125rem",
       xl: "1.25rem",
@@ -40,36 +41,10 @@ module.exports = {
         border: "#E4E4E4",
       },
       keyframes: {
-        footerLine: {
-          "0%": {
-            left: "40px",
-          },
-          "50%": {
-            left: "0",
-          },
-          "100%": {
-            left: "40px",
-          },
-        },
-        ripple: {
-          "0%": {
-            "-webkit-transform": "scale(1)",
-            transform: "scale(1)",
-            opacity: 0,
-          },
-          "30%": {
-            opacity: 0.4,
-          },
-          "100%": {
-            "-webkit-transform": "scale(1.5)",
-            transform: "scale(1.5)",
-            opacity: 0,
-          },
-        },
+        
       },
       animation: {
-        footerLine: "footerLine 7s linear infinite",
-        ripple: "ripple 2s linear infinite",
+        
       },
     },
   },

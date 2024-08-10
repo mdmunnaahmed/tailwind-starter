@@ -1,24 +1,23 @@
 {
-  "name": "tailwindcss-project",
+  "name": "patrick",
   "version": "1.0.0",
-  "description": "",
+  "description": "��#\u0000 \u0000p\u0000a\u0000t\u0000r\u0000i\u0000c\u0000k\u0000\r\u0000 \u0000",
   "main": "index.js",
   "scripts": {
-    "start": "vite",
-    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.min.css --minify",
-    "watch": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --watch",
-    "dev": "vite build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/input.css -o ./dist/assets/css/style.css -w"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdmunnaahmed/patrick.git"
+  },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^10.4.17",
-    "postcss": "^8.4.33",
-    "tailwindcss": "^3.4.1",
-    "vite": "^5.0.12"
+  "bugs": {
+    "url": "https://github.com/mdmunnaahmed/patrick/issues"
   },
-  "dependencies": {
-    "tall": "^8.0.0"
+  "homepage": "https://github.com/mdmunnaahmed/patrick#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
   }
 }
