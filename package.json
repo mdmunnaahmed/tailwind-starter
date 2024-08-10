@@ -1,0 +1,24 @@
+{
+  "name": "tailwindcss-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.min.css --minify",
+    "watch": "tailwindcss -i ./assets/css/input.css -o ./assets/css/style.css --watch",
+    "dev": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.0.12"
+  },
+  "dependencies": {
+    "tall": "^8.0.0"
+  }
+}

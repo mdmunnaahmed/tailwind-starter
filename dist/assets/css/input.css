@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-body font-normal text-base font-body leading-[1.75];
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-title font-semibold font-heading;
+  }
+  h1 {
+    @apply leading-tight sm:leading-[1.17] xl:text-4xl lg:text-3xl sm:text-[36px] text-[30px] font-bold;
+  }
+  h2 {
+    @apply leading-[1.2] xl:text-3xl text-[28px] md:text-[36px] font-bold;
+  }
+  h3 {
+    @apply lg:text-2xl text-xl;
+  }
+  h3,
+  h4,
+  h5,
+  h5 {
+    @apply leading-[1.4];
+  }
+  a {
+    @apply hover:text-primary transition duration-300 ease-linear;
+  }
+
+  @media (max-width: 767px) {
+    .service-grid-item:nth-of-type(2n + 1) {
+      @apply border-l border-b border-border pb-8 pt-8 ps-8;
+    }
+    .service-grid-item:nth-of-type(2n + 2) {
+      @apply border-b border-r border-border ps-8 pb-8 pt-8;
+    }
+    .service-grid-item:nth-child(1) {
+      @apply pt-0;
+    }
+    .service-grid-item:nth-last-child(1) {
+      @apply border-b-0 pb-0;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .service-grid-item:nth-of-type(2n + 1) {
+      @apply border-r border-b border-border pb-6 pt-6;
+    }
+    .service-grid-item:nth-of-type(2n + 2) {
+      @apply border-b border-border ps-6 pb-6 pt-6;
+    }
+    .service-grid-item:nth-child(1),
+    .service-grid-item:nth-child(2) {
+      @apply pt-0;
+    }
+    .service-grid-item:nth-last-child(1),
+    .service-grid-item:nth-last-child(2) {
+      @apply border-b-0 pb-0;
+    }
+  }
+  @media (min-width:992px) {
+    .service-grid-item:nth-of-type(3n + 1) {
+      @apply border-r border-b border-border pb-6 pt-6;
+    }
+    .service-grid-item:nth-of-type(3n + 2) {
+      @apply border-r border-b border-border ps-6 pb-6 pt-6;
+    }
+    .service-grid-item:nth-of-type(3n + 3) {
+      @apply border-b border-border ps-6 pb-6 pt-6;
+    }
+    .service-grid-item:nth-child(1),
+    .service-grid-item:nth-child(2),
+    .service-grid-item:nth-child(3) {
+      @apply pt-0;
+    }
+    .service-grid-item:nth-last-child(1),
+    .service-grid-item:nth-last-child(2),
+    .service-grid-item:nth-last-child(3) {
+      @apply border-b-0;
+    }
+  }
+  .responsive-header.active {
+    @apply translate-x-0 opacity-100;
+  }
+  .overlay.active {
+    @apply opacity-100 visible;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply relative z-[2] overflow-hidden inline-block border-none text-center font-body text-sm font-bold leading-none py-[20.5px] px-[29px] rounded-none text-white bg-primary uppercase transition duration-500 ease-linear;
+  }
+  .btn-primary:hover {
+    @apply text-title;
+  }
+  .btn-primary::before,
+  .btn-primary::after {
+    @apply absolute h-full w-2/3 bg-black top-0 -z-10 content-[''] rounded-2xl transition duration-500 ease-linear;
+  }
+  .btn-primary.two {
+    @apply hover:text-white
+  }
+  .btn-primary.two:hover::before,
+  .btn-primary.two:hover::after {
+    @apply hover:bg-title;
+  }
+  .btn-primary::before {
+    @apply -translate-x-full -left-1 ;
+  }
+  .btn-primary::after {
+    @apply translate-x-full -right-1;
+  }
+  .btn-primary:hover::before {
+    @apply -translate-x-1 rounded-none bg-white;
+  }
+  .btn-primary:hover::after {
+    @apply translate-x-1 rounded-none bg-white;
+  }
+  .btn-primary.white {
+    @apply bg-white text-primary hover:text-white
+  }
+  .btn-primary.white--two {
+    @apply bg-white text-primary hover:text-white hover:bg-primary
+  }
+  .btn-primary.white::after, .btn-primary.white::before {
+    @apply bg-title
+  }
+  .btn-primary.white--two::after, .btn-primary.white--two::before {
+    @apply bg-title hover:bg-primary
+  }
+
+  .social-links li a:hover img {
+    filter: brightness(500%);
+  }
+  .social-links li {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.3s linear;
+  }
+  .social-links li:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+  .social-links li:nth-child(4) {
+    transition-delay: 0.1s;
+  }
+  .social-links li:nth-child(3) {
+    transition-delay: 0.15s;
+  }
+  .social-links li:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  .social-links li:nth-child(1) {
+    transition-delay: 0.25s;
+  }
+  .social-wrapper:hover .social-links li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply xxl:max-w-[1270px];
+  }
+}
