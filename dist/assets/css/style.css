@@ -585,12 +585,3 @@ video {
 .border {
   border-width: 1px;
 }
-
-.font-bold {
-  font-weight: 700;
-}
-
-.text-primary {
-  --tw-text-opacity: 1;
-  color: rgb(255 94 20 / var(--tw-text-opacity));
-}
