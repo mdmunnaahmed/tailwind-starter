@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["*"],
+  content: ["*", "./dist/**/*.html"],
   theme: {
     screens: {
       sm: "576px",
@@ -40,12 +40,8 @@ module.exports = {
         body: "#4D5765",
         border: "#E4E4E4",
       },
-      keyframes: {
-        
-      },
-      animation: {
-        
-      },
+      keyframes: {},
+      animation: {},
     },
   },
   plugins: [],
